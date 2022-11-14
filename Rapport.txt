@@ -1,0 +1,33 @@
+
+1) Binome:
+	HABLAL Abdelhamid 22118316 @hablal
+	TOUKAL Raouf 22117878 @toukal
+	
+
+2) les fonctionalités demandé marche cad:
+      (read qui lie un fichier texte et le traduit vers la syntaxe abstraite d'ocaml (type program))
+      --reprint :affiche un programe polish
+      --eval :evalue un programme polish
+      --simpl : qui prend un program et le simplifie (retourne un programme equivalent au premier)
+      --vars : qui prend un program et affiche toutes les variables étudiés à la premiere ligne 
+               et les variables qui ont un risque d'etre utilisé sans initialisation a la deuxieme ligne
+      --sign : qui prend un program et affiche pour chaque variable les signes possible 
+               et qui affiche a la fin soit safe soit divbyzero "ligne" si il rencontre une division par zero pour la premiere fois
+
+
+3) le projet doit etre compilé via make et pour executer le programme on doit utiliser ./run avec l'option --reprint pour afficher le programme ou bien --eval pour l'evaluer , --simpl pour simplifier le programme et le reaficher, --vars pour la fonctionalité des variables et --sign pour la fonctionnalité des signes. puis faut preciser le chemin vers un fichier polish 
+
+
+4) le projet est devisé en 10 modules en plus des .mli de chaque fichier ou on trouve:
+   le module syntaxe : ou on a mis la syntaxe abstraite de Polish.
+   le module fichier : ou on trouve toutes les fonctions qui permettent a la fin de lire un fichier et renvoyer une liste des lignes ou chaque ligne est sous forme d'un uplé d'espacement (nombre d'espace) et une liste des mots de cette ligne.
+   le module read : ou on trouve toutes les fonctions qui permettent de transformer une liste de lignes d'un fichier vers un type programe de la syntaxe abstraite de polish.
+   le module print : ou on trouve toutes les fonctions qui permettent de transformer un type programe de la syntaxe abstraite de polish vers une chaine de charactèrs.
+   le module eval : ou on trouve toutes les fonctions qui permettent d'evaluer le programe (de type programme de la syntaxe abstraite).
+   le module simpl : ou on trouve toutes les fonctions qui permettent de simplifier un programme polish et renvoyer le nouveau programme equivalent.
+   le module vars : ou on trouve toutes les fonctions qui permettent de realiser la fonctionalité des vars.
+   le module sign_extra : ou on trouve toutes les fonctions auxiliaires qu'on va utiliser dans sign.
+   le module sign : ou on trouve toutes les fonctions qui permettent de realiser la fonctionalité sign a l'aide des fonctions auxiliaires qui se retrouvent dans sign_extra.
+
+5) pour le premier rendu on a diviser le travail où HABLAL a fait l'option eval et l'option print et TOUKAL a commencé l'option read et ensuite comme read est un peu difficile sur les parties (expression et bloc) on les a terminé ensemble, puis pour le deuxieme rendu on a divisé le travail de sorte que HABLAL a fait l'option vars et TOUKAL a fait l'option simpl puis on a fait ensemble l'option sign car c'est la plus difficile.
+
